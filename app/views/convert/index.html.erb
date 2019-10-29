@@ -1,0 +1,9 @@
+<%= form_with url: root_path, local:true do |form| %>
+  <%= form.text_area :convert_target, value: @convert_target , cols: 50, rows: 20 %><br />
+  <%= form.submit "JSON変換" %>
+<% end %>
+<% if @converted.present? %>
+  <textarea name="" id="" cols="50" rows="20">
+    <%= @converted %>
+  </textarea>
+<% end %>
