@@ -1,4 +1,6 @@
 class ConvertController < ApplicationController
+  protect_from_forgery
+  
   def index
     @convert_target ||= "{'a' => 1, b: {x: 9, y: 8}}"
   end
